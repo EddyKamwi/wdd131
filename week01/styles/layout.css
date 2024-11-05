@@ -1,0 +1,56 @@
+body{
+    font-size: large;
+    font-weight: 600;
+}
+header {
+  background-color: rgb(68, 50, 50);
+  color: #fff;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: large;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+header p {
+  padding: 2rem;
+  font-size: larger;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.grid .col-span-7 {
+  grid-column: 1/9;
+  text-wrap: nowrap;
+}
+.grid .col-span-4 {
+  grid-column: 9/13;
+}
+.bg-gray {
+  background-color: gray;
+}
+.bg-snow {
+  background-color: snow;
+}
+.bg-gray,
+.bg-snow {
+  height: 300px;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  font-size: larger;
+}
+footer {
+  background-color: rgb(68, 50, 50);
+  text-align: center;
+  padding: 1rem;
+  color:#fff;
+}

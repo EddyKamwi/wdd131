@@ -1,48 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WDD 131 - Dynamic Web Fundamentals - Edward Kamwi</title>
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, Edward Kamwi Profile, Zambia">
-    <meta name="author" content="Edward Kamwi">
-    <link rel="stylesheet" href="styles/base.css">
-</head>
-<body>
+    <meta
+      name="description"
+      content="WDD 131 - Dynamic Web Fundamentals, Edward Kamwi Profile, Zambia"
+    />
+    <meta name="author" content="Edward Kamwi" />
+    <link rel="stylesheet" href="styles/base.css" />
+  </head>
+  <body>
     <header>
-        <h1 class="lb-bold">WDD 131 - Dynamic Web Fundamentals - Edward Kamwi</h1>
-        <nav>
-            <a href="#" class="lb-regular">LinkedIn</a>
-            <a href="#" class="lb-regular">I-Learn</a>
-            <a href="#" class="lb-regular">Scripture</a>
-            <a href="#" class="lb-regular">Final Project</a>
-        </nav>
+      <h1 class="lb-bold">WDD 131 - Dynamic Web Fundamentals - Edward Kamwi</h1>
+      <nav>
+        <a href="#" class="lb-regular">LinkedIn</a>
+        <a href="#" class="lb-regular">I-Learn</a>
+        <a href="#" class="lb-regular">Scripture</a>
+        <a href="#" class="lb-regular">Final Project</a>
+      </nav>
     </header>
-    <main>
-        <section class="card">
-            <h2 class="head">About Me</h2>
-            <div class="body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam iste nesciunt tempora magni iusto odit, ducimus nulla officia commodi nam temporibus perferendis consectetur placeat nobis explicabo illo similique magnam minus eveniet, neque cumque dolorum. Nostrum itaque perferendis fugiat soluta in ipsa provident earum numquam ab! Quis vitae veritatis fugiat tempora.</p>
-                <img src="images/#" alt="Happy Edward">
-                <h3>Lorem, ipsum dolor.</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla soluta fugiat totam nostrum eos fugit? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam quos est labore rem dolore quae?</p>
-            </div>
-        </section>
-        <section class="card">
-            <h2 class="head">Web Dev Resources</h2>
-            <ul class="body">
-                <li>Dev to Community</li>
-                <li>Smashing Magazine</li>
-                <li>CSS Tricks</li>
-                <li>W3 Schools</li>
-                <li>Udemy</li>
-                <li>Lorem ipsum dolor</li>
-            </ul>
-        </section>
+    <main class="grid">
+      <section class="span-7 card">
+        <h2 class="head">About Me</h2>
+        <div class="body">
+          
+          <img src="images/edward_kamwi.jpg" width="200" alt="Edward" /><p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            iste nesciunt tempora magni iusto odit, ducimus nulla officia
+            commodi nam temporibus perferendis consectetur placeat nobis
+            explicabo illo similique magnam minus eveniet, neque cumque dolorum.
+            Nostrum itaque perferendis fugiat soluta in ipsa provident earum
+            numquam ab! Quis vitae veritatis fugiat tempora.
+          </p>
+          <h3>Lorem, ipsum dolor.</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla
+            soluta fugiat totam nostrum eos fugit? Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Aliquam quos est labore rem dolore
+            quae?
+          </p>
+        </div>
+      </section>
+      <section class="span-5 card">
+        <h2 class="head">Web Dev Resources</h2>
+        <ul class="body">
+          <li>Dev to Community</li>
+          <li>Smashing Magazine</li>
+          <li>CSS Tricks</li>
+          <li>W3 Schools</li>
+          <li>Udemy</li>
+          <li>Lorem ipsum dolor</li>
+        </ul>
+      </section>
     </main>
     <footer class="lb-italic">
-        <p>&copy; <span id="currentyear"></span> | Edward Kamwi | Zambia </p>
-    <p>Last modified: <span id="lastmodified"></span></p>
+      <p>&copy; <span id="currentyear"></span> | Edward Kamwi | Zambia</p>
+      <p>Last modified: <span id="lastmodified"></span></p>
     </footer>
-</body>
+  </body>
 </html>
