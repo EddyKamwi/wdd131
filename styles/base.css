@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 :root {
   --primary-color: #0a0067;
   --secondary-color: #7678ed;
@@ -35,8 +36,7 @@ body {
 }
 .grid .col-span-9 {
   grid-column: 5/13;
-}
-.grid .col-span-8 {
+}.grid .col-span-8 {
   grid-column: 1/9;
 }
 .grid .col-span-5 {
@@ -85,7 +85,6 @@ main {
   max-width: 1080px;
   margin: 1rem auto;
 }
-
 .body img {
   margin: 10px;
   height: auto;
