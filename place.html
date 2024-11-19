@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place</title>
+    <meta name="author" content="Edward Kamwi">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+  </head>
+  <body>
+    <header><h1>Zambia</h1></header>
+    <main>
+      <div class="hero">
+        <picture>
+          <source
+            media="(min-width:1000px )"
+            srcset="images/silhouette_large.webp"
+         >
+          <source
+            media="(min-width:500px )"
+            srcset="images/silhouette_medium.jpg"
+         >
+          <img
+            src="images/silhouette_small.jpg"
+            alt="StockCake Majestic Elephant Silhouette"
+         >
+        </picture>
+      </div>
+      <div class="card" id="data">
+        <h2>Data</h2>
+        <table>
+            <tr><td>Area:</td><td>752,614 sq. km</td></tr>
+            <tr><td>Population:</td><td>18.4 million (2020)</td></tr>
+            <tr><td>Capital: </td><td>Lusaka</td></tr>
+            <tr><td>Currency: </td><td>Zambian Kwacha</td></tr>
+            <tr><td>Time Zone:</td><td> UTC+2</td></tr>
+            <tr><td>Calling Code: </td><td>+260</td></tr>
+            <tr><td>Internet TLD: </td><td>.zm</td></tr>
+            <tr><td>Provinces: </td><td>10</td></tr>
+        </table>
+    </div>
+        <div class="card" id="weather">
+            <h2 class="weather">Weather</h2>
+        <table>
+            <tr><td>Temperature:</td><td>28°c</td></tr>
+            <tr><td>Conditions:</td><td>Partly cloudy</td></tr>
+            <tr><td>Wind: </td><td>14km/h</td></tr>
+            <tr><td>Humidity: </td><td>44%</td></tr>
+        </table></div>
+
+      </div>
+    </main>
+    <footer class="lb-italic">
+        <p>&copy; <span id="currentyear"></span> 😍 Edward Kamwi 😍 Zambia</p>
+        <p>Last modified: <span id="lastmodified"></span></p>
+      </footer>
+  </body>
+</html>
