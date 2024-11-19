@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Images</title>
-    <link rel="stylesheet" href="styles/responsive-images.css">
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Images</title>
+        <link rel="stylesheet" href="styles/responsive-images.css">
+    </head>
+    <body>
+        <main>
+            <div class="hero">
+                <picture>
+                    <source media="(min-width:1000px)" srcset="Images/aba-nigeria-temple-lds-large.webp">
+                    <source media="(min-width:500px)" srcset="Images/aba-nigeria-temple-lds-medium.webp">
+                    <img src="images/aba-nigeria-temple-lds-small.webp" alt="aba nigeria temple lds" width="500" height="250">
+                </picture>
+            </div>
+        </main>
+    </body>
 </html>
