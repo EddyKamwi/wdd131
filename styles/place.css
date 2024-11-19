@@ -12,6 +12,9 @@ body{
   height: auto;
   object-fit: contain;
 }
+svg{
+    width: 100px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -45,9 +48,7 @@ h2{
     padding: 3rem 0;
     width: 100%;
 }
-.weather::after{
-    content:"  ⛅";
-}
+
 
 
 td:first-child{
