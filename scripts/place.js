@@ -1,7 +1,7 @@
 document.getElementById("currentyear").innerHTML = new Date().getFullYear();
 document.getElementById("lastmodified").innerHTML = document.lastModified;
+const data = document.getElementById("dat");
 
-const wchill = document.getElementById("windhill");
 let temp = 50;
 let windspeed = 56;
 var windchill = "N/A";
@@ -16,8 +16,8 @@ function Windchill(wspend, temp) {
 }
 
 if (temp <= 10 && windspeed >= 4.8) {
-  Windchill((wspend = windspeed), (temp = temp));
+  windchill = Windchill(windspeed, temp);
 }
-document.body.addEventListener("loadeddata", () => {
-  windchill.innerText = windchill;
-});
+
+data.innerHTML = windchill;
+
