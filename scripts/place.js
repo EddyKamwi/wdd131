@@ -2,8 +2,8 @@ document.getElementById("currentyear").innerHTML = new Date().getFullYear();
 document.getElementById("lastmodified").innerHTML = document.lastModified;
 const data = document.getElementById("dat");
 
-let temp = 10;
-let windspeed = 5;
+let temp = 25;
+let windspeed = 15;
 var windchill = "N/A";
 
 function Windchill(wspend, temp) {
