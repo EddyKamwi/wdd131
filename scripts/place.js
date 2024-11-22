@@ -2,22 +2,18 @@ document.getElementById("currentyear").innerHTML = new Date().getFullYear();
 document.getElementById("lastmodified").innerHTML = document.lastModified;
 const data = document.getElementById("dat");
 
-let temp = 25;
-let windspeed = 15;
+let temperature = 28;
+let windspeed = 14;
 var windchill = "N/A";
 
-function Windchill(wspend, temp) {
-  return (
-    13.12 +
-    0.6215 * temp -
-    11.37 * wspend * 0.16 +
-    0.3965 * temp * wspend * 0.16
-  );
+function calculateWindChill(v, T) {
+  const arith =
+    13.12 + 0.6215 * T - 11.37 * (v ** 0.16) + 0.3965 * T * (v ** 0.16);
+  return `${arith.toFixed(1)}°C`;
 }
 
-if (temp <= 10 && windspeed >= 4.8) {
-  windchill = Windchill(windspeed, temp);
+if (temperature <= 10 && windspeed >= 4.8) {
+  windchill = calculateWindChill(windspeed, temperature);
 }
 
 data.innerHTML = windchill;
-
