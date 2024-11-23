@@ -16,9 +16,15 @@
     grid-column: 1/7;
     grid-row: 1/7;
   }
+
+/* Psuedo-Element Emoticon */
+
   .weather::after {
     content: "  ⛅";
   }
+
+
+
   .card {
     width: 190px;
     font-size: small;
