@@ -12,7 +12,8 @@ body{
   height: auto;
   object-fit: contain;
 }
-svg{
+svg{ 
+    display: block;
     width: 100px;
 }
 * {
