@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header,
+main,
+footer {
+  margin: 0.5rem auto;
+  text-align: center;
+  padding: 0.3rem;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  place-items: center;
+}
+main img {
+  animation:fade 5s;
+  width: 400px;
+  height: 600px;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
