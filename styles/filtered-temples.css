@@ -25,19 +25,27 @@ footer {
   text-align: center;
   padding: 0.5rem;
 }
+ul li {
+  list-style: none;
+}
+ul{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  grid-column: 1/3;
+}
 main {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: .3rem;
   background-color: var(--assert1);
   color: #000000;
   place-items: center;
 }
 header nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: 5fr 1fr;
 }
 nav a {
   display: block;
@@ -61,19 +69,25 @@ nav a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding: 1.5rem;
+  padding: 2rem;
 }
 .active {
   background-color: var(--prim);
   color: var(--assert1);
 }
 .menu {
-  display: none;
+  width: 100px;
+  background-color: var(--prim);
+  border: #fff solid 1px;
+  color: #fff;
+  font-size: xx-large;
+  float: right;
 }
 .card{
-  padding: 1rem;
-  width: 280px;
+  padding: .8rem;
+  width: 303px;
   border: solid #000 1px;
+  height: 340px;
   
 }
 .card h3{

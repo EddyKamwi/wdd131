@@ -1,32 +1,3 @@
-document.getElementById("currentyear").innerHTML = new Date().getFullYear();
-document.getElementById("lastmodified").innerHTML = document.lastModified;
-
-let bar = document.getElementById("bars");
-let display = true;
-const menu = document.getElementById("menu");
-const crossbars = document.getElementById("crossbars");
-
-function Display() {
-  // check if a menu is displaying
-  if (display) {
-    // display or hide the menu
-    menu.style.display = "flex";
-    crossbars.style.display = "flex";
-    bar.style.display = "none";
-    display = false;
-  }
-}
-function Hide() {
-  // check if a menu is displaying
-  if (display === false) {
-    // display or hide the menu
-    menu.style.display = "none";
-    crossbars.style.display = "none";
-    bar.style.display = "block";
-    display = true;
-  }
-}
-
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -84,43 +55,127 @@ const temples = [
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg",
   },
-  // Add more temple objects here...
+  {
+    templeName: "Accra Ghana",
+    location: "Accra, Ghana",
+    dedicated: "2004, January, 11",
+    area: 17500,
+    imageUrl:
+      "https://www.churchofjesuschrist.org/imgs/7cf8e8b9e5a5a1f379d4e2c9bc2166f9c6007aca/full/640%2C/0/default",
+  },
+  {
+    templeName: "Apia Samoa",
+    location: "Apia, Pesega, Samoa",
+    dedicated: "1983, August, 5",
+    area: 18691,
+    imageUrl:
+      "https://www.churchofjesuschrist.org/imgs/6007b20e832459d2d8540c15a8f5fa80d7dcff0f/full/640%2C/0/default",
+  },
+  {
+    templeName: "Anchorage Alaska",
+    location: "Anchorage, Alaska, United States",
+    dedicated: "1999, January, 9",
+    area: 11937,
+    imageUrl:
+      "https://www.churchofjesuschrist.org/imgs/ef1d9b0a65b398d3d5aad2ccaad5aa79588b6cfd/full/640%2C/0/default",
+  },
 ];
 
-document.getElementById("bars").addEventListener("click", Display);
-document.getElementById("crossBars").addEventListener("click", Hide);
-
+// select container
 var main = document.getElementById("container");
 
-temples.map((temple) => {
+function create(temple) {
+  // create an element
   const div = document.createElement("div");
 
-  div.innerHTML =
-  `<div class="card">
+  // add new content for the new element
+  div.innerHTML = `<div class="card">
         <h3>${temple.templeName}</h3>
 
         <p>
-          <span class="color-span">LOCATION:</span> <span id="location">${temple.location}</span>
+          <span class="color-span">LOCATION:</span> <span id="location">${
+            temple.location
+          }</span>
         </p>
         <p>
           <span class="color-span">DEDICATED:</span>
           <span id="dedication">${temple.dedicated}</span>
         </p>
         <p>
-          <span class="color-span">SIZE:</span> <span id="size">${temple.area}</span>sq fit
+          <span class="color-span">SIZE:</span> <span id="size">${
+            temple.area
+          } </span>sq fit
         </p>
 
         <picture>
           <img
             loading="lazy"
             src=${temple.imageUrl}
-            width="100%"
-            height="auto"
+
+            alt=${
+              // adding a image alt
+              temple.templeName
+            }
+            width="301px"
+            height="187px"
          >
         </picture>
-    </div>`
+    </div>`;
+
+  // add the element to the container
+
   main.appendChild(div);
-});
-// document.getElementById("location").innerText = "Aba, Nigeria"
-// document.getElementById("dedication").innerText = "2005, August, 7"
-// document.getElementById("size").innerText = "11500"
+}
+function clearContainer(title="Home") {
+  // clearing what ever is in the div.container
+  main.innerHTML = `<h2>${title}</h2>`;
+}
+
+// footer dates
+document.getElementById("currentyear").innerHTML = new Date().getFullYear();
+document.getElementById("lastmodified").innerHTML = document.lastModified;
+
+// menu
+var display = true;
+const bars = document.getElementById("bars");
+const menu = document.getElementById("menu");
+
+function toggleBars() {
+  // check if a menu is displaying
+  if (display) {
+    // display or hide the menu
+    bars.innerText = "x";
+    menu.style.display = "flex";
+    display = false;
+  } else if (display === false) {
+    // display or hide the menu
+    menu.style.display = "none";
+    bars.innerText = "≡";
+    display = true;
+  }
+}
+
+document.getElementById("bars").addEventListener("click", toggleBars);
+const newnav = document.getElementById("new");
+const small = document.getElementById("small");
+const large = document.getElementById("large");
+const home = document.getElementById("home");
+const old = document.getElementById("old");
+
+// loop through the temples dictionary
+temples.map((temple) => { create(temple) });
+
+  // home display all
+home.addEventListener("click", () => { clearContainer(); temples.map((temple) => { create(temple) }) });
+
+  // old - temples built before 1900
+old.addEventListener("click", () => { clearContainer("Old"); temples.map((temple) => { var year = parseInt(temple.dedicated.slice(0, 4)); if (year < 1900) { create(temple); } }) });
+
+  // New- temples built after 2000
+newnav.addEventListener("click", () => { clearContainer("New"); temples.map((temple) => { var year = parseInt(temple.dedicated.slice(0, 4)); if (year > 2000) { create(temple); } }) });
+
+  // Large - temples larger than 90000 square feet
+large.addEventListener("click", () => { clearContainer("Large");temples.map((temple) => {  var area = temple.area; if (area > 90000) { create(temple); }})});
+
+// Small - temples smaller than 10000 square feet
+small.addEventListener("click", () => { clearContainer("Small");temples.map((temple) => { var area = temple.area; if (area < 10000) { create(temple); }})});
