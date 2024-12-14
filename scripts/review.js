@@ -1,8 +1,9 @@
 const container = document.querySelector(".mainReview")
 
 if (localStorage.getItem("productReview")) {
-  num = parseInt(localStorage.getItem("productReview"))
-  container.innerText = num + 1
+    num = parseInt(localStorage.getItem("productReview"))
+    num++
+  container.innerText = num
   localStorage.setItem("productReview",num+1)
 } else {
   localStorage.setItem("productReview", 1)
