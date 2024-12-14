@@ -28,9 +28,21 @@ const products = [
     }
 ];
 const selectTag = document.getElementById("product");
+
 products.forEach((product) => {
     const opt = document.createElement("option");
     opt.setAttribute("value",product.id)
     opt.innerText= product.name
     selectTag.appendChild(opt);
 })
+
+const container = document.querySelector(".mainReview")
+
+if (localStorage.getItem("productReview")) {
+  num = parseInt(localStorage.getItem("productReview"))
+  container.innerText = num + 1
+  localStorage.setItem("productReview",num+1)
+} else {
+  localStorage.setItem("productReview", 1)
+  container.innerText = 1
+}
