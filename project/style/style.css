@@ -1,0 +1,58 @@
+:root {
+  --prim: #0f454f;
+  --sec: #489fb5;
+  --asset-1: #b9e6ef;
+  --asset-2: #ede7e3;
+  --asset-3: #ffa62b;
+
+  --bg: var(--prim);
+}
+ul{
+    list-style-type:none;
+}
+li{
+    padding: .5rem;
+}
+.bg-prim{background-color: var(--prim);color: var(--asset-2);}
+.bg-sec{background-color: var(--sec);color: var(--asset-2);}
+.bg-asset1{background-color: var(--asset-1);color: var(--prim);}
+.bg-asset2{background-color: var(--asset-2);color: var(--prim);}
+.bg-asset3{background-color: var(--asset-3);color: var(--prim);}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--bg);
+  color: var(--asset-2);
+}
+header,
+main,
+footer {
+  max-width: 480px;
+  margin: 0.2rem auto;
+  padding: 1.4rem;
+}
+h1{
+    font-size: 1.8rem;
+    text-align: left;
+}
+h3,h4{
+    margin-top: 1rem;
+}
+.bg{
+    width: 50px;
+    height: 20px;
+}
+header a{
+color: var(--asset-1);
+}
+main{
+    background-color: var(--asset-1);
+    color: var(--prim);
+}

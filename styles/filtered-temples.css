@@ -72,7 +72,7 @@ nav a:hover {
   padding: 2rem;
 }
 .active {
-  background-color: var(--prim);
+  background-color:#054f6f;
   color: var(--assert1);
 }
 .menu {

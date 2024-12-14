@@ -1,0 +1,16 @@
+:root {
+  --prim: #0f454f;
+  --sec: #489fb5;
+  --asset-1: #b9e6ef;
+  --asset-2: #ede7e3;
+  --asset-3: #ffa62b;
+}
+@media screen and (min-width:480px) {
+  header,
+  main,
+  footer {
+    max-width: 1080px;
+    margin: 0.2rem auto;
+    padding: 1.4rem;
+  }
+}

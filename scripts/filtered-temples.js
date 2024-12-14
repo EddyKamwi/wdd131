@@ -87,9 +87,10 @@ var main = document.getElementById("container");
 function create(temple) {
   // create an element
   const div = document.createElement("div");
-
+  // add class of card to  div
+  div.classList.add("card");
   // add new content for the new element
-  div.innerHTML = `<div class="card">
+  div.innerHTML = `
         <h3>${temple.templeName}</h3>
 
         <p>
@@ -119,8 +120,7 @@ function create(temple) {
             width="301px"
             height="187px"
          >
-        </picture>
-    </div>`;
+        </picture>`;
 
   // add the element to the container
 
@@ -129,6 +129,7 @@ function create(temple) {
 function clearContainer(title="Home") {
   // clearing what ever is in the div.container
   main.innerHTML = `<h2>${title}</h2>`;
+  document.querySelector(".active").classList.remove("active");
 }
 
 // footer dates
@@ -155,27 +156,15 @@ function toggleBars() {
   }
 }
 
-document.getElementById("bars").addEventListener("click", toggleBars);
-const newnav = document.getElementById("new");
-const small = document.getElementById("small");
-const large = document.getElementById("large");
-const home = document.getElementById("home");
-const old = document.getElementById("old");
-
-// loop through the temples dictionary
-temples.map((temple) => { create(temple) });
-
-  // home display all
-home.addEventListener("click", () => { clearContainer(); temples.map((temple) => { create(temple) }) });
-
-  // old - temples built before 1900
-old.addEventListener("click", () => { clearContainer("Old"); temples.map((temple) => { var year = parseInt(temple.dedicated.slice(0, 4)); if (year < 1900) { create(temple); } }) });
-
-  // New- temples built after 2000
-newnav.addEventListener("click", () => { clearContainer("New"); temples.map((temple) => { var year = parseInt(temple.dedicated.slice(0, 4)); if (year > 2000) { create(temple); } }) });
-
-  // Large - temples larger than 90000 square feet
-large.addEventListener("click", () => { clearContainer("Large");temples.map((temple) => {  var area = temple.area; if (area > 90000) { create(temple); }})});
-
-// Small - temples smaller than 10000 square feet
-small.addEventListener("click", () => { clearContainer("Small");temples.map((temple) => { var area = temple.area; if (area < 10000) { create(temple); }})});
+bars.addEventListener("click",toggleBars)
+document.querySelector("#menu").addEventListener
+  ("click", (e) => {
+    var title = e.target.innerText;
+    clearContainer(title);
+    if (title === "Home") { temples.map((temple) => { e.target.classList.add("active"); create(temple)}) }
+    else if (title === "Old") { temples.map((temple) => { e.target.classList.add("active"); var year = parseInt(temple.dedicated.slice(0, 4)); if (year < 1900) { create(temple); } })}
+    else if (title === "New") { temples.map((temple) => { e.target.classList.add("active"); var year = parseInt(temple.dedicated.slice(0, 4)); if (year > 2000) { create(temple); } })}
+    else if (title === "Large") { temples.map((temple) => { e.target.classList.add("active"); var area = temple.area; if (area > 90000) { create(temple); }})}
+    else if (title === "Small") { temples.map((temple) => { e.target.classList.add("active"); var area = temple.area; if (area < 10000) { create(temple); }})}
+  })
+document.addEventListener("loadstart", temples.map((temple) => { document.querySelector("#home").classList.add("active"); create(temple)}))
