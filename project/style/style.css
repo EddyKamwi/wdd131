@@ -42,8 +42,8 @@ h1{
     font-size: 1.8rem;
     text-align: left;
 }
-h3,h4{
-    margin-top: 1rem;
+h2,h3,h4{
+    margin-top: 2rem;
 }
 .bg{
     width: 50px;
