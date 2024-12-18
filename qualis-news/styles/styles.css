@@ -15,7 +15,7 @@ body {
   font-family: "Open Sans", serif;
   font-weight: 400;
   background-color: var(--bg);
-  color: var(--asset-2);
+  color: var(--prim);
 }
 .menuBar {
   display: grid;
@@ -73,6 +73,41 @@ footer {
 .hero img {
   width: 100%;
 }
-h1{
+h1,h2{
+  text-transform: capitalize;
   padding: 1rem;
+}
+h2{
+  border-bottom: #0f454f solid 3px;
+}
+.card{
+  width: 320px;
+  padding: 1rem;
+}
+.card .title{
+  font-size: 2rem;
+}
+.card .body{
+  margin: 1rem 0;
+}.card .footer{
+  font-size: .9rem;
+  font-style: italic;
+  text-transform: capitalize;
+}
+.main{
+  display: grid;
+
+}
+.tag{
+  color: var(--asset-3);
+  text-transform: uppercase;
+  font-size: .7rem;
+  background-color: var(--prim);
+  border-radius: 2px;
+  padding: 2px;text-align: center;
+  margin: 3px;
+}
+.aside{display: none;}
+.active{
+  background-color: #093138;
 }

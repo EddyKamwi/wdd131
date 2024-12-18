@@ -1,4 +1,13 @@
 @media screen and (min-width: 600px) {
+  .main-grid{
+    display: flex;
+    gap: 16px;
+    justify-content:space-evenly;
+  }
+  aside{
+    flex: 1;
+  }
+  
   .menu {
     display: flex;
     flex-direction: row;
@@ -24,11 +33,18 @@
   .menu {
     justify-content: space-evenly;
   }
+  .main{
+    flex: 4;
+    grid-template-columns: auto auto;
+  }
 }
 @media screen and (min-width: 720px) {
   .logo,
   .menu li a {
     font-size: 1.1rem;
+  }
+  .main{
+    grid-template-columns: auto auto;
   }
 }
 @media screen and (min-width: 1320px) {
@@ -36,10 +52,16 @@
   .menu li a {
     font-size: 1.8rem;
   }
+  .main{
+    grid-template-columns: auto auto auto;
+  }
 }
 @media screen and (min-width: 2000px) {
   .logo,
   .menu li a {
     font-size: 2.2rem;
+  }
+  .main{
+    grid-template-columns: auto auto auto auto;
   }
 }
