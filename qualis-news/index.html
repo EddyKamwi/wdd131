@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Qualis News</title>
+    <meta name="description" content="Welcome to the world of political and sports news">
+    <meta name="author" content="Edward Kamwi">
+
+    <!-- google font Open Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+
+    <!-- local files -->
+     <link rel="stylesheet" href="styles/styles.css">    
+     <link rel="stylesheet" href="styles/styles-large.css">
+     <script src="scripts/script.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Qualis News</h1>
+            <div class="menuBar" id="menuBar">≡</div>
+        </div>
+        <nav>
+            <ul class="menu" id="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Political News</a></li>
+                <li><a href="#">Sports News</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <source media="(min-width:600px )" srcset="images/hero.webp">
+                <img src="images/heroMobile.webp" alt="Happy New Caster" loading="lazy">
+            </picture>
+        </section>
+    </main>
+    <footer class="lb-italic">
+        <p>&copy; <span id="currentyear"></span> ⁝⁝⁝ Edward Kamwi ⁝⁝⁝ Zambia</p>
+        <p>Last modified: <span id="lastmodified"></span></p>
+    </footer>
+</body>
+</html>

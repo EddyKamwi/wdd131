@@ -1,0 +1,78 @@
+:root {
+  --prim: #0f454f;
+  --sec: #489fb5;
+  --asset-1: #b9e6ef;
+  --asset-2: #ede7e3;
+  --asset-3: #ffa62b;
+  --bg: var(--prim);
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", serif;
+  font-weight: 400;
+  background-color: var(--bg);
+  color: var(--asset-2);
+}
+.menuBar {
+  display: grid;
+  place-items: center;
+  place-content: center;
+  font-size: 4rem;
+  background-color: var(--prim);
+  width: 60px;
+  height: 45px;
+  cursor: pointer;
+}
+.menuBar:hover,.menu li a:hover {
+  background-color: rgb(9, 47, 54);
+}
+.menu li a{
+  padding:1rem
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  list-style-type: none;
+  margin: 1rem auto;
+}
+.menu li {
+  display: flex;
+  justify-content: center;
+}
+.menu li a {
+  text-align: center;
+  font-size: 28px;
+  display: block;
+  width: 100%;
+  color: var(--asset-2);
+  text-decoration: none;
+}
+main {
+  background-color: var(--sec);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero img {
+  width: 100%;
+}
+h1{
+  padding: 1rem;
+}
