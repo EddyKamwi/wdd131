@@ -71,6 +71,8 @@ footer {
   align-items: center;
 }
 .hero img {
+  background-size: cover;
+  background-position: center;
   width: 100%;
 }
 h1,h2{
