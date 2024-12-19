@@ -345,7 +345,7 @@ sportsNews.forEach((sportNews) => {
         div.innerHTML = `
             <h3 class="title">${sportNews.title}<span class="tag">${sportNews.tag}</span></h3>
             <p class="body">
-            ${sportNews.content.slice(0,60)}...<a href="./sports">read more</a>
+            ${sportNews.content.slice(0,60)}...<a href="./sports.html">read more</a>
             </p>
             <div class="footer">author: ${sportNews.author} date: ${sportNews.date}</div>
           `;
@@ -362,7 +362,7 @@ politicalNews.forEach((news) => {
         div.innerHTML = `
             <h3 class="title">${news.title}<span class="tag">${news.tag}</span></h3>
             <p class="body">
-            ${news.content.slice(0,60)}... <a href="./political">read more</a>
+            ${news.content.slice(0,60)}... <a href="./political.html">read more</a>
             </p>
             <div class="footer">author: ${news.author} date: ${news.date}</div>
           `;
