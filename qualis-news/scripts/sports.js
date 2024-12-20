@@ -185,7 +185,8 @@ const container = document.querySelector(".main-p");
 // container = document.querySelector(".main");
 const sec = document.querySelector("aside");
 
-var form = `<h2>Subscrip to News-Letter</h2><form method="get" action="#">
+var form = `<h2>Subscrip to News-Letter</h2>
+<form method="get" action="./index.html">
             
             <label for="email">Email</label>
             <input type="email" name="email" id="email" placeholder="firstname@gmail.com" required>
