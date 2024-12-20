@@ -3,11 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome | Qualis News</title>
-    <meta
-      name="description"
-      content="Welcome to the world of political and sports news"
-    />
+    <title>Sports News | Qualis News</title>
+    <meta name="description" content="Welcome to the world of sports news" />
     <meta name="author" content="Edward Kamwi" />
 
     <!-- google font Open Sans-->
@@ -21,46 +18,35 @@
     <!-- local files -->
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/styles-large.css" />
-    <script src="scripts/script.js" defer></script>
+    <script src="scripts/sports.js" defer></script>
   </head>
   <body>
     <header>
-      <div class="logo">
+      <div class="brand">
         <h1>Qualis News</h1>
         <div class="menuBar" id="menuBar">≡</div>
       </div>
       <nav>
         <ul class="menu" id="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Political News</a></li>
-          <li><a href="#">Sports News</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="">Political News</a></li>
+          <li><a href="./sports.html" class="active">Sports News</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="hero">
-        <picture>
-          <source media="(min-width:600px )" srcset="images/hero.webp" />
-          <img
-            src="images/heroMobile.webp"
-            alt="Happy New Caster"
-            loading="lazy"
-            height="420px"
-          />
-        </picture>
-      </section>
       <div class="main-grid">
         <section>
-          <h2>Latest News</h2>
-          <div class="main"></div>
+          <h2>Sports News</h2>
+          <div class="main-p"></div>
         </section>
-        <aside>
-          <h2>website ads</h2>
+        <aside class="aside item">
+          
         </aside>
       </div>
     </main>
     <footer class="lb-italic">
-      <p>&copy; <span id="currentyear"></span> ⋙⋘ Edward Kamwi ⋙⋘ Zambia</p>
+      <p>&copy; <span id="currentyear"></span> 😍 Edward Kamwi 😍 Zambia</p>
       <p>Last modified: <span id="lastmodified"></span></p>
     </footer>
   </body>

@@ -12,9 +12,12 @@
 }
 
 body {
+  background-color: var(--prim);
   font-family: "Open Sans", serif;
   font-weight: 400;
-  background-color: var(--bg);
+  
+}
+body a{
   color: var(--prim);
 }
 .menuBar {
@@ -23,6 +26,7 @@ body {
   place-content: center;
   font-size: 4rem;
   background-color: var(--prim);
+  color:var(--asset-1);
   width: 60px;
   height: 45px;
   cursor: pointer;
@@ -33,10 +37,20 @@ body {
 .menu li a{
   padding:1rem
 }
-.logo {
+.brand {
+  color:var(--asset-2);
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+form{
+  margin:5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap:.2rem;
+}
+form *{
+  padding:.3rem;
 }
 .menu {
   display: none;
@@ -60,12 +74,13 @@ body {
   text-decoration: none;
 }
 main {
-  background-color: var(--sec);
+  background-color: var(--asset-1);
   display: grid;
   grid-template-columns: 1fr;
 }
 footer {
   display: flex;
+  color: var(--asset-1);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -83,11 +98,11 @@ h2{
   border-bottom: #0f454f solid 3px;
 }
 .card{
-  width: 320px;
+  max-width: 420px;
   padding: 1rem;
 }
 .card .title{
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 .card .body{
   margin: 1rem 0;
@@ -101,15 +116,24 @@ h2{
 
 }
 .tag{
-  color: var(--asset-3);
+  color: var(--asset-1);
   text-transform: uppercase;
   font-size: .7rem;
   background-color: var(--prim);
   border-radius: 2px;
   padding: 2px;text-align: center;
   margin: 3px;
+}.item{max-width: 360px;}section .body{margin: 1rem;}section .footer{
+  margin: 1rem;text-transform: capitalize;
 }
-.aside{display: none;}
+aside{display: none;}
 .active{
   background-color: #093138;
+}
+.brand h1{
+  color: var(--asset-1);
+}
+hr{
+  border:var(--prim) solid 1.8px;
+  margin-top: 5rem;
 }

@@ -3,11 +3,8 @@
     display: flex;
     gap: 16px;
     justify-content:space-evenly;
-  }
-  aside{
-    flex: 1;
-  }
-  
+    align-items: start;
+  }  
   .menu {
     display: flex;
     flex-direction: row;
@@ -26,9 +23,9 @@
   .menu li a {
     text-align: center;
   }
-  .logo,
+  h1,
   .menu li a {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
   .menu {
     justify-content: space-evenly;
@@ -37,18 +34,26 @@
     flex: 4;
     grid-template-columns: auto auto;
   }
+  .main-p{
+    flex: 4;
+  }
 }
 @media screen and (min-width: 720px) {
-  .logo,
+  aside{
+    display: flex;
+    flex-direction: column;
+    flex: .6;
+  }
+  h1,
   .menu li a {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
   .main{
     grid-template-columns: auto auto;
   }
 }
 @media screen and (min-width: 1320px) {
-  .logo,
+  h1,
   .menu li a {
     font-size: 1.8rem;
   }
@@ -57,7 +62,7 @@
   }
 }
 @media screen and (min-width: 2000px) {
-  .logo,
+  h1,
   .menu li a {
     font-size: 2.2rem;
   }
